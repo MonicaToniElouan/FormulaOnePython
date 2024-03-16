@@ -9,7 +9,7 @@ class DBBroker:
             host="localhost",
             user="root",
             password="databases1122",
-            database="mydb"
+            database="FormulaOne"
         )
 
     @staticmethod
@@ -44,11 +44,9 @@ class DBBroker:
         if DBBroker._connection.is_connected():
             DBBroker._connection.close()
             
-        
-agent = DBBroker.GetBroker()
-agent1 = DBBroker.GetBroker()
-print(agent.Read("SELECT * FROM PERSONS"))
-agent1.Change("INSERT INTO PERSONS (PersonID, PersonName) VALUES ('36', 'Miguel')")
 
-
-
+#agent = DBBroker.GetBroker()
+#agent.Read("CREATE TABLE COUNTRIES ( `CountryID` CHAR(3) NOT NULL PRIMARY KEY , `CountryName` VARCHAR(45) NOT NULL , `CountryPopulation` INT NOT NULL);")
+#agent.Read("CREATE TABLE GPs ( `GPID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY , `GPName` VARCHAR(80) NOT NULL , `CountryID` CHAR(3) NOT NULL , FOREIGN KEY (`CountryID`) REFERENCES COUNTRIES(`CountryID`));")
+#agent.Read("CREATE TABLE TEAMS ( `TeamID` INT NOT NULL AUTO_INCREMENT PRIMARY KEY , `TeamName` VARCHAR(45) NOT NULL , `TeamCountry` CHAR(3) NOT NULL , `CreationDate` DATE NOT NULL, FOREIGN KEY (TeamCountry) REFERENCES COUNTRIES(CountryID));")
+#agent.Read("ALTER TABLE GPs CHANGE COLUMN GPCountry GPCountry CHAR(3) NOT NULL,ADD FOREIGN KEY (GPCountry) REFERENCES COUNTRIES(CountryID);")
