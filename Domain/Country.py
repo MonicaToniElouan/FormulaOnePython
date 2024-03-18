@@ -5,8 +5,6 @@ class Country:
         self._countryName = countryName
         self._countryPopulation = countryPopulation
     
-    
-
     # GETTERS AND SETTERS
     @property
     def CountryID(self):

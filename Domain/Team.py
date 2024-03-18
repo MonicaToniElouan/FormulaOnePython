@@ -6,6 +6,7 @@ class Team:
         self._TeamCountry = TeamCountry
         self._CreationDate = CreationDate
         
+
     # GETTERS AND SETTERS
     @property
     def TeamID(self):
@@ -38,4 +39,5 @@ class Team:
     @CreationDate.setter
     def CreationDate(self, value):
         self._CreationDate = value
+
     
